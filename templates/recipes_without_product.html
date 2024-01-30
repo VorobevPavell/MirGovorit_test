@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Recipes without product{% endblock %}
+
+{% block content %}
+  <table class="table" style="margin-left: 10px; margin-right: 10px">
+  <thead>
+    <tr>
+      <th scope="col">N</th>
+      <th scope="col">Recipe id</th>
+      <th scope="col">Recipe name</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for key, val in recipies.items %}
+      <tr>
+      <th scope="row">{{ forloop.counter }}</th>
+      <td>{{ key }}</td>
+      <td>{{ val }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}
